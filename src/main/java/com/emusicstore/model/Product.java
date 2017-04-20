@@ -5,6 +5,7 @@ package com.emusicstore.model;
  */
 public class Product {
 
+    private String productId;
     private String productName;
     private String productCategory;
     private String productDescription;
@@ -12,7 +13,15 @@ public class Product {
     private String productCondition;
     private String productStatus;
     private int unitInStock;
-    private String productManufactures;
+    private String productManufacturers;
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
 
     public String getProductName() {
         return productName;
@@ -70,11 +79,11 @@ public class Product {
         this.unitInStock = unitInStock;
     }
 
-    public String getProductManufactures() {
-        return productManufactures;
+    public String getProductManufacturers() {
+        return productManufacturers;
     }
 
-    public void setProductManufactures(String productManufactures) {
-        this.productManufactures = productManufactures;
+    public void setProductManufacturers(String productManufacturers) {
+        this.productManufacturers = productManufacturers;
     }
 }
