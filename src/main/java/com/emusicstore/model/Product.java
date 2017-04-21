@@ -1,9 +1,8 @@
 package com.emusicstore.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.persistence.*;
 
 /**
  * Created by hanghua on 4/19/17.
@@ -23,6 +22,10 @@ public class Product {
     private String productStatus;
     private int unitInStock;
     private String productManufacturers;
+
+    //hibernate will not persist the element marked by Transient annotation
+    @Transient
+    private MultipartFile productImage;
 
     public String getProductId() {
         return productId;
@@ -94,5 +97,13 @@ public class Product {
 
     public void setProductManufacturers(String productManufacturers) {
         this.productManufacturers = productManufacturers;
+    }
+
+    public MultipartFile getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(MultipartFile productImage) {
+        this.productImage = productImage;
     }
 }
