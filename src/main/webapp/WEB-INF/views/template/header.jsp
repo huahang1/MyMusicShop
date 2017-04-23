@@ -19,6 +19,9 @@
 
     <title>My Music Shop</title>
 
+    <%--AngularJS--%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.1/angular.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet">
 
