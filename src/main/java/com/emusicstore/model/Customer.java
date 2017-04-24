@@ -3,15 +3,14 @@ package com.emusicstore.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by hanghua on 4/23/17.
  */
+
+@Entity
 public class Customer implements Serializable {
 
     private static final long serialVersionUID = 5140900014886997914L;
@@ -37,7 +36,7 @@ public class Customer implements Serializable {
 
     @OneToOne
     @JoinColumn(name = "billingAddressId")
-    private BillingAddress billingAdress;
+    private BillingAddress billingAddress;
 
     @OneToOne
     @JoinColumn(name = "shippingAddressId")
@@ -104,12 +103,12 @@ public class Customer implements Serializable {
         this.enabled = enabled;
     }
 
-    public BillingAddress getBillingAdress() {
-        return billingAdress;
+    public BillingAddress getBillingAddress() {
+        return billingAddress;
     }
 
-    public void setBillingAdress(BillingAddress billingAdress) {
-        this.billingAdress = billingAdress;
+    public void setBillingAddress(BillingAddress billingAddress) {
+        this.billingAddress = billingAddress;
     }
 
     public ShippingAddress getShippingAddress() {

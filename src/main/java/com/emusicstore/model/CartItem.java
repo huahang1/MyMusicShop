@@ -2,15 +2,14 @@ package com.emusicstore.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by hanghua on 4/22/17.
  */
+
+@Entity
 public class CartItem implements Serializable {
 
 
@@ -18,7 +17,7 @@ public class CartItem implements Serializable {
 
     @Id
     @GeneratedValue
-    private int cartId;
+    private int cartItemId;
 
     @ManyToOne
     @JoinColumn(name = "cartId")
@@ -32,16 +31,12 @@ public class CartItem implements Serializable {
     private int quantity;
     private double totalPrice;
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
+    public int getCartItemId() {
+        return cartItemId;
     }
 
-    public int getCartId() {
-        return cartId;
-    }
-
-    public void setCartId(int cartId) {
-        this.cartId = cartId;
+    public void setCartItemId(int cartItemId) {
+        this.cartItemId = cartItemId;
     }
 
     public Cart getCart() {

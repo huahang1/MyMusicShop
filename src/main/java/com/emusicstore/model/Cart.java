@@ -11,6 +11,7 @@ import java.util.Map;
 /**
  * Created by hanghua on 4/22/17.
  */
+
 @Entity
 public class Cart implements Serializable{
 
@@ -23,7 +24,7 @@ public class Cart implements Serializable{
     @OneToMany(mappedBy = "cart",cascade= CascadeType.ALL,fetch = FetchType.EAGER)
     private List<CartItem> cartItems;
 
-    @OneToMany
+    @OneToOne
     @JoinColumn(name = "customerId")
     @JsonIgnore
     private Customer customer;

@@ -20,7 +20,9 @@
             <div ng-controller="cartCtrl" ng-init="initCartId('${cartId}')">
             <div>
                 <a class="btn btn-danger pull-left" ng-click="clearCart()"><span class="glyphicon glyphicon-remove"></span> Clear Cart</a>
+                <a href="<spring:url value="/order/${{cartId}"/>" class="btn btn-success pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>Check Out</a>
             </div>
+
             <table class="table table-hover">
                 <tr>
                     <th>Product</th>
@@ -45,7 +47,7 @@
                 </tr>
             </table>
 
-            <a href="<spring:url value="/productList"/> " class="btn btn-default">Continue Shopping</a>
+            <a href="<spring:url value="/"/> " class="btn btn-default">Continue Shopping</a>
             </div>
         </section>
     </div>

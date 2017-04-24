@@ -16,7 +16,7 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="<c:url value="/resources/js/jquery-3.2.1.min.css"/>"><\/script>')</script>
+<%--<script>window.jQuery || document.write('<script src="<c:url value="/resources/js/jquery-3.2.1.min.css"/>"><\/script>')</script>--%>
 <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
 
 </body>
