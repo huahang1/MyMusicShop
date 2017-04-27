@@ -57,8 +57,7 @@ public class AdminProduct {
 
         MultipartFile productImage = product.getProductImage();
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-//        path = Paths.get(rootDirectory + "WEB-INF/resources/images/"+product.getProductId()+".png");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+product.getProductId()+".png");
+        path = Paths.get(rootDirectory + "/WEB-INF/resources/images/"+product.getProductId()+".png");
 
 
         if (productImage != null && !productImage.isEmpty()) {
@@ -91,7 +90,7 @@ public class AdminProduct {
 
         MultipartFile productImage = product.getProductImage();
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+product.getProductId()+".png");
+        path = Paths.get(rootDirectory + "/WEB-INF/resources/images/"+product.getProductId()+".png");
 
         if (productImage != null && !productImage.isEmpty()) {
             try {
@@ -110,7 +109,7 @@ public class AdminProduct {
     @RequestMapping("/product/deleteProduct/{id}")
     public String deleteProduct(@PathVariable int id, Model model, HttpServletRequest request) {
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\" + id + ".png");
+        path = Paths.get(rootDirectory + "/WEB-INF/resources/images/" + id + ".png");
 
         if (Files.exists(path)) {
             try {

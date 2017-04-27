@@ -66,7 +66,7 @@
                                 <li><a href="<c:url value="/admin"/> ">Admin</a> </li>
                             </c:if>
                         </c:if>
-                        <c:if test="${pageContext.request.userPrincial.name == null}">
+                        <c:if test="${pageContext.request.userPrincipal.name == null}">
                             <li><a href="<c:url value="/login/"/> ">Login</a> </li>
                             <li><a href="<c:url value="/register/"/> ">Register</a> </li>
                         </c:if>
