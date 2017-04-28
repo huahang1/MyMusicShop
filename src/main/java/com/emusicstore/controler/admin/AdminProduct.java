@@ -74,6 +74,7 @@ public class AdminProduct {
 
     @RequestMapping("/product/editProduct/{id}")
     public String editProduct(@PathVariable("id") int id, Model model) {
+
         Product product = productService.getProductById(id);
 
         model.addAttribute("product", product);
@@ -84,6 +85,7 @@ public class AdminProduct {
     @RequestMapping(value="/product/editProduct", method = RequestMethod.POST)
     public String editProductPost(@Valid @ModelAttribute("product") Product product, BindingResult result,
                                  HttpServletRequest request) {
+
         if(result.hasErrors()) {
             return "editProduct";
         }

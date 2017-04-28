@@ -33,4 +33,14 @@ cartApp.controller('cartCtrl',function($scope,$http){
             alert('remove successfully');
         })
     };
+    
+    $scope.calGrandTotal = function () {
+        var grandTotal = 0;
+
+        for(var i = 0; i<$scope.cart.cartItems.length;i++){
+            grandTotal += $scope.cart.cartItems[i].totalPrice;
+        }
+
+        return grandTotal;
+    }
 });
